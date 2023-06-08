@@ -1,0 +1,48 @@
+<div class="container-fluid text-center p-2 bg-body-tertiary">
+  <form [formGroup]="githubDetailsForm">
+    <div class="row">
+      <div class="col bg-white border mx-1" style="border-radius:10px;">
+        <div class="container-fluid border mr-2 p-2 mt-2 fs-5 fw-semibold"
+          style="color: white;border-radius: 10px;background-image: linear-gradient(to right, #8E2DE2, #4A00E0 ); box-shadow: 0 5px 10px rgba(45, 45, 45, 0.2)">
+          Configuration
+        </div>
+        <div class="container-fluid text-left border my-2 p-2"
+          style="border-radius: 10px; height:auto;width: auto; box-shadow: 0 5px 10px rgba(45, 45, 45, 0.05);">
+          <div class="input-group mb-2">
+            <input class="form-control" type="file" id="formFile" (change)="onFileSelected($event)">
+          </div>
+          <div class="container-fluid py-2">
+            <img class="center-image py-4" src="assets/img/explain.png" style="width: 15%; height: auto;">
+            <p class="fst-italic pt-1">Select the code file and ask cobot to explain in simple way...!</p>
+          </div>
+          <div class="d-grid">
+            <button class="btn btn-secondary fw-semibold" (click)="explainCode()" type="button"
+              style="background-image:  linear-gradient(to right, #0093E9, #80D0C7); border: none;">Explain
+              Code
+              <i class="bi bi-code-slash"></i>
+            </button>
+            <div *ngIf="isApiCalled" class="gradient-bar my-2">
+              <div style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-0" *ngIf="azureResponseMap.size!==0">
+      <div class="col bg-white border mx-1 mt-2" style="border-radius:10px;">
+        <div class="container-fluid border p-2 my-2 fs-6 fw-semibold"
+          style="color: white;border-radius: 10px;background-image: linear-gradient(to right, #8E2DE2, #4A00E0); box-shadow: 0 5px 10px rgba(45, 45, 45, 0.2)">
+          Analysis Report
+        </div>
+
+        <div class="container-fluid border my-2" *ngFor="let item of azureResponseMap | keyvalue"
+          style="white-space: pre-line;text-align: left; border-radius: 10px; background-color: rgb(252, 252, 252);">
+          <p class="fst-italic pt-3"><b>File Name: {{item.key}}</b></p>
+          <hr>
+          <p>{{item.value}}</p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Code Genius</title>
+</head>
+
+<body>
+  <app-nav-tab></app-nav-tab>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 container-fluid">
+        <div class="container-fluid text-left border my-2 py-2 px-0" style="border-radius: 10px;height:110% ; box-shadow: 0 5px 10px rgba(45, 45, 45, 0.05);background-color: rgb(240, 240, 240);
+         ">
+
+          <div>
+            <div style="text-align:center">
+              <div class="mt-2 mx-5 sidebar-title fs-4 fw-semibold side-header-text">Features</div>
+            </div>
+            <div>
+
+              <a href="/github-vulnerability" style="text-decoration:none ;">
+                <div class="cards card m-2" style="border-radius:12px;">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-2">
+                        <img class="center-image pt-3" src="assets/img/security.png" style="width: 150%; height: auto;">
+                      </div>
+                      <div class="col">
+                        <span class="fs-5 fw-semibold">Code Analysis</span> <br>
+                        <span>Analyse potential vulnerabilities and bugs in your git PR!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/git-summary" style="text-decoration:none ;">
+                <div class="cards card m-2" style="border-radius:12px;">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-2">
+                        <img class="center-image pt-3" src="assets/img/hastag.png" style="width: 160%; height: auto;">
+                      </div>
+                      <div class="col">
+                        <span class="fs-5 fw-semibold">Git Summary</span> <br>
+                        <span>Summarise, comment your changes in PR from here itself!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/code-explain" style="text-decoration:none ;">
+                <div class="cards card m-2" style="border-radius:12px;">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-2">
+                        <img class="center-image pt-3" src="assets/img/code1.png" style="width: 160%; height: auto;">
+                      </div>
+                      <div class="col">
+                        <span class="fs-5 fw-semibold">Explain Code</span> <br>
+                        <span>Select the files to understand the code in simplest way!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/cobot-plugin" style="text-decoration:none ;">
+                <div class="cards card m-2" style="border-radius:12px;">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-2">
+                        <img class="center-image pt-3" src="assets/img/puzzle.png" style="width: 150%; height: auto;">
+                      </div>
+                      <div class="col">
+                        <span class="fs-5 fw-semibold">Cobot Plugin</span> <br>
+                        <span>Elevate your coding experience with our cobot plugin!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/online-help" style="text-decoration:none ;">
+                <div class="cards card m-2" style="border-radius:12px;">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-2">
+                        <img class="center-image pt-3" src="assets/img/chatbot.png" style="width: 140%; height: auto;">
+                      </div>
+                      <div class="col">
+                        <span class="fs-5 fw-semibold">Online Help</span> <br>
+                        <span>Epsilon Pre-trained Transformer [EPT]</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col container-fluid" style="padding-left: 2px;">
+
+        <router-outlet></router-outlet>
+
+
+      </div>
+      <!-- <div class="col container-fluid" style="padding-left: 2px;">
+        <div class="container-fluid text-left border my-2 py-2"
+          style="border-radius: 10px; height:auto;width: auto; box-shadow: 0 5px 10px rgba(45, 45, 45, 0.05);">
+
+  <router-outlet></router-outlet>
+
+
+      </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- <nav class="navbar fixed-bottom bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Fixed bottom</a>
+    </div>
+  </nav> -->
+</body>
+
+</html>
